@@ -1,0 +1,2 @@
+class Bok < ApplicationRecord
+end

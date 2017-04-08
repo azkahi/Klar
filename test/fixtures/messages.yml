@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  subject: MyString
+  content: MyText
+  draft_flag: 1
+  sent_datetime: 2017-04-07 15:33:20
+  status: 1
+  user_id: one
+
+two:
+  title: MyString
+  subject: MyString
+  content: MyText
+  draft_flag: 1
+  sent_datetime: 2017-04-07 15:33:20
+  status: 1
+  user_id: two
