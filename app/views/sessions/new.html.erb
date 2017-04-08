@@ -1,52 +1,21 @@
 <% provide(:title, "Log in") %>
 
-<!--start-container-->
-<div class="head-bg sTop">
-	<div class="container">
-		<div class="col-lg-12 header-note">
-			<a href="#"><img src="images/logo.png" title="Flat style" /></a>
-			<h1>Selamat datang di Klar. <br/> <br/>
-				Silahkan login.</h1>
-				<div class="pagination-centered row contact-form">
-					<form>
-						<div class="text-center text-box" style="padding: 0px 30%">
-							<%= form_for(:session, url: login_path) do |f| %>
+<h1>Selamat datang di Klar. <br/> <br/>
+	Silahkan login.</h1>
+	<div class="row">
+		<form>
+			<div style="padding: 0px 30%">
+				<%= form_for(:session, url: login_path) do |f| %>
 
-							<%= f.label :email %>
-							<%= f.email_field :email, class: 'form-control' %>
+				<%= f.label :email %>
+				<%= f.email_field :email, class: 'form-control' %>
 
-							<%= f.label :password %>
-							<%= f.password_field :password, class: 'form-control' %>
+				<%= f.label :password %>
+				<%= f.password_field :password, class: 'form-control' %>
 
-							<%= f.submit "Log in", class: "btn btn-primary" %>
-							<% end %>
-						</div>
-					</form>
-				</div>
-				<br />
-				<a class="btn btn-primary big-btn" href="home.html">Login<span> </span></a>
+				<%= f.submit "Log in", class: "btn btn-primary" %>
+				<% end %>
 			</div>
-		</div>
-	</div>
-	<!--//End-container-->
-	<!-- start-contact -->
-	<div class="contact section s4">
-		<div class="container">
-			<!--start-social-icons-->
-			<div class="social-icons">
-				<ul>
-					<li><a class="facebook" href="#"> <span> </span></a></li>
-					<li><a class="twitter" href="#"> <span> </span></a></li>
-					<li><a class="dribbble" href="#"> <span> </span></a></li>
-				</ul>
-			</div>
-			<!-- //End-social-icons -->
-			<!-- start-copy-right -->
-			<div class="copy-right">
-				<p>Copyright &#169; 2014 <span>Flat Style.</span> All Rights Reserved.</p>
-				<p>Design by<a href="http://w3layouts.com/">W3layouts</a></p>
-			</div>
-			<!--//End-copy-right-->
-		</div>
+		</form>
 	</div>
 </div>
