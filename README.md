@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to:
+1. Buka direktori klar ini pada terminal / command prompt
+2. Jalankan command "rails server"
+3. Pada web browser, ketik url "localhost:3000"
+4. Web app sudah berjalan
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Catatan:
+Web app ini masih dalam bentuk prototipe, 
+masih terdapat banyak bug dan fitur messaging masih belum diimplementasi. 
+Salah satu bug adalah tidak dapatnya melakukan post comment.
