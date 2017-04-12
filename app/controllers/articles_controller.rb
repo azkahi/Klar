@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :content).merge(user_id: 1, BOK_id: 1)
+		params.require(:article).permit(:title, :content)
 	end
 
 	def find_article
