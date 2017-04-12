@@ -8,5 +8,5 @@ How to:
 
 Catatan:
 Web app ini masih dalam bentuk prototipe, 
-masih terdapat banyak bug dan fitur messaging masih belum diimplementasi. 
+sehingga masih terdapat banyak bug. 
 Salah satu bug adalah tidak dapatnya melakukan post comment.
