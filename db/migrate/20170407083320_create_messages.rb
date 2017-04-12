@@ -5,7 +5,6 @@ class CreateMessages < ActiveRecord::Migration[5.0]
       t.string :subject
       t.text :content
       t.integer :draft_flag
-      t.timestamp :sent_datetime
       t.integer :status
       t.references :user, foreign_key: true
 

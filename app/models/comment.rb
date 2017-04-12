@@ -1,3 +1,3 @@
 class Comment < ApplicationRecord
-  belongs_to :writer_id
+  belongs_to :writer
 end

@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 
 	# Create action saves the article into database
 	def create
-		@article = Article.new(article_params)
+		@article = current_user.articles.new(article_params)
 		if @article.save
 			flash[:notice] = "Successfully created article!"
 			redirect_to article_path(@article)
@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :content)
+		params.require(:article).permit(:title, :content).merge(user_id: 1, BOK_id: 1)
 	end
 
 	def find_article

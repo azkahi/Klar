@@ -8,7 +8,7 @@
       </div>
 
       <div>
-        <%= raw article.body %>
+        <%= raw article.content %>
       </div>
 
       <div class="text-center">
@@ -17,5 +17,6 @@
       <br>
     </div>
     <% end %>
+    <%= link_to "Create new article", new_article_path %>
   </div>
 </div>

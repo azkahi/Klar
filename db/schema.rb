@@ -15,11 +15,9 @@ ActiveRecord::Schema.define(version: 20170407091151) do
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.integer  "BOK_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["BOK_id"], name: "index_articles_on_BOK_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
@@ -47,10 +45,10 @@ ActiveRecord::Schema.define(version: 20170407091151) do
   create_table "comments", force: :cascade do |t|
     t.text     "content"
     t.text     "writer_name"
-    t.integer  "writer_id"
+    t.integer  "article_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["writer_id"], name: "index_comments_on_writer_id"
+    t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -58,11 +56,10 @@ ActiveRecord::Schema.define(version: 20170407091151) do
     t.string   "subject"
     t.text     "content"
     t.integer  "draft_flag"
-    t.datetime "sent_datetime"
     t.integer  "status"
     t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 

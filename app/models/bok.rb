@@ -1,2 +1,0 @@
-class Bok < ApplicationRecord
-end
