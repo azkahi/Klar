@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-		before_action :find_message, only: [:edit, :update, :show, :delete]
+	before_action :find_message, only: [:edit, :update, :show, :delete]
 
 	# Index action to render all messages
 	def index
@@ -13,7 +13,6 @@ class MessagesController < ApplicationController
 
 	# Create action saves the message into database
 	def create
-		p message_params
 		@message = current_user.messages.new(message_params)
 		if @message.save
 			flash[:notice] = "Successfully created message!"
@@ -23,7 +22,7 @@ class MessagesController < ApplicationController
 			render :new
 		end
 	end
-
+	
 	# Edit action retrives the message and renders the edit page
 	def edit
 	end
@@ -43,7 +42,6 @@ class MessagesController < ApplicationController
 	def show
 	end
 
-	# The destroy action removes the message permanently from the database
 	def destroy
 		if @messages.destroy
 			flash[:notice] = "Successfully deleted message!"
