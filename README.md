@@ -9,4 +9,7 @@ How to:
 Catatan:
 Web app ini masih dalam bentuk prototipe, 
 sehingga masih terdapat banyak bug. 
-Salah satu bug adalah tidak dapatnya melakukan post comment.
+
+
+#### Bug yang sudah teridentifikasi
+1. Fitur Messaging
