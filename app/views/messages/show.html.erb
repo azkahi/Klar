@@ -12,7 +12,7 @@
 
 	<p>
 		<strong>Sender:</strong>
-		<%= @message.user_id %>
+		<%= User.find(@message.user_id).name %>
 	</p>
 
 
