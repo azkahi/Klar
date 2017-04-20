@@ -1,0 +1,27 @@
+<div class="col-sm-11 col-xs-12 blog-content">
+	<% if flash[:notice] %>
+		<div class="notice"><%= flash[:notice] %></div>
+	<% end %>
+
+	<h2 class="text-center">
+		<strong>Title:</strong>
+		<%= @message.title %>
+	</h2>
+
+	<p>
+		<strong>To:</strong>
+		<%= @message.to %>
+	</p>
+
+	<h5 class="text-center"><%= @message.created_at.strftime('%b %d, %Y') %></h5>
+
+	<div>
+		<strong>Post:</strong>
+		<%= raw @message.content %>
+	</div>
+
+	<p>
+		<strong>User:</strong>
+		<%= @message.user_name %>
+	</p>
+</div>
