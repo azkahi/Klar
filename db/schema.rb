@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 20170407091151) do
     t.string   "subject"
     t.text     "content"
     t.integer  "draft_flag"
-    t.integer  "status"
+    t.integer  "recipient"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

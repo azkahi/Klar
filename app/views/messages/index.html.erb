@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="col-sm-10 col-sm-offset-1 col-xs-12 blog-content">
+    <% @messages.each do |message| %>
+    <div class="col-xs-12">
+      <div class="text-center">
+        <h2><%= message.title %></h2>
+        <h6><%= message.created_at.strftime('%b %d, %Y') %></h6>
+      </div>
+
+      <div>
+        <%= raw message.content %>
+      </div>
+
+      <div class="text-center">
+        <%= link_to "READ MORE", message_path(message) %>
+      </div>
+      <br>
+    </div>
+    <% end %>
+    <%= link_to "Create new message", new_message_path %>
+  </div>
+</div>
