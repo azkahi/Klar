@@ -14,8 +14,8 @@
 	</div>
 	<br>
 	<p>
-		Posted by user number 
-		<strong><%= @article.user_id %></strong>
+		Posted by  
+		<strong><%= User.find(@article.user_id).name %></strong>
 	</p>
 	<br>
 	<div class="row">
