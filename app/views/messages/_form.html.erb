@@ -17,7 +17,8 @@
 <div class="row">
 <div class="form-group">
   <div class="form-group col-sm-6">
-    <%= f.input :to, class: "form-control" %>
+    <%= f.label "* To" %><br>
+    <%= f.input :subject, class: "form-control" , label: false%>
   </div>
 </div>
 </div>
@@ -25,7 +26,7 @@
 <div class="row">
 <div class="form-group">
   <div class="form-group col-sm-6">
-    <%= f.input :subject, class: "form-control" %>
+    <%= f.input :title, class: "form-control" %>
   </div>
 </div>
 </div>

@@ -7,11 +7,11 @@
   <br>
   <div class="row">
     <div class="col-md-4 col-sm-offset-1">
-      <%= link_to "Create new message", new_message_path , {:style=>'color:#FFFFFF;', :class=>'btn btn-warning'} %>
+      <%= link_to "Create new message", new_message_path , {:style=>'color:#FFFFFF;', :class=>'btn btn-primary'} %>
     </div>
   </div>
   <br>
-  <% if @message.blank? %>
+  <% if @messages.blank? %>
   <div class="row">
     <div class="col-md-4">
       <h4>Tidak ada pesan untuk Anda.</h4>
