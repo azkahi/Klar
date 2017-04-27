@@ -4,47 +4,72 @@
 	<% end %>
 
 	<h2 class="text-center">
-		<strong>Title:</strong>
-		<%= @article.title %>
+		<strong><%= @article.title %></strong>
 	</h2>
 
 	<h5 class="text-center"><%= @article.created_at.strftime('%b %d, %Y') %></h5>
 
-	<div>
-		<strong>Post:</strong>
+	<div class="content">
 		<%= raw @article.content %>
 	</div>
-
+	<br>
 	<p>
-		<strong>User:</strong>
-		<%= @article.user_id %>
+		Posted by user number 
+		<strong><%= @article.user_id %></strong>
 	</p>
-
-	<h2>Comments</h2>
-	<% @article.comments.each do |comment| %>
-	<p>
-		<strong>Commenter:</strong>
-		<%= comment.writer_name %>
-	</p>
-
-	<p>
-		<strong>Comment:</strong>
-		<%= comment.content %>
-	</p>
-	<% end %>
-
-	<h2>Add a comment:</h2>
-	<%= form_for([@article, @article.comments.build]) do |f| %>
-	<p>
-		<%= f.label :writer_name %><br>
-		<%= f.text_field :writer_name %>
-	</p>
-	<p>
-		<%= f.label :content %><br>
-		<%= f.text_area :content %>
-	</p>
-	<p>
-		<%= f.submit %>
-	</p>
-	<% end %>
+	<br>
+	<div class="row">
+		<div class="row">
+			<h2 class="col-md-1" style="text-align: left;">Comments</h2>
+		</div>
+		<div class="row">
+			<% @article.comments.each do |comment| %>
+			<div class="col-md-8">
+				<div class="container-fluid" style="border: 1px solid #cecece;">
+					<div class="row">
+						<div class="col-md-6">
+							<p>
+								<strong>Commenter:</strong>
+								<%= comment.writer_name %>
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<p>
+								<%= comment.content %>
+							</p>
+						</div>
+					</div>
+				</div>
+				<br><br>
+			</div>
+			<% end %>
+		</div>
+	</div>
+	
+	<div class="row">
+		
+		<h2 style="text-align: left;"><b>Add a comment</b></h2>
+		<%= form_for([@article, @article.comments.build]) do |f| %>
+		<div class="form-group row">
+			<div class="col-md-8">
+				<%= f.label :writer_name %><br>
+				<%= f.text_field :writer_name %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-md-8">
+				<%= f.label :content %><br>
+				<%= f.text_area :content %>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-md-4">
+				<%= f.submit 'Submit', :class=>'btn btn-primary' %>
+			</div>
+		</div>
+		<% end %>
+		</div>
+	</div>
 </div>

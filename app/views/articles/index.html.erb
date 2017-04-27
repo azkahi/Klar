@@ -1,22 +1,40 @@
 <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Daftar Artikel</h1>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4 col-sm-offset-1">
+      <%= link_to "Create new article", new_article_path , {:style=>'color:#FFFFFF;', :class=>'btn btn-primary'} %>
+    </div>
+  </div>
+  <br>
   <div class="col-sm-10 col-sm-offset-1 col-xs-12 blog-content">
     <% @articles.each do |article| %>
-    <div class="col-xs-12">
-      <div class="text-center">
-        <h2><%= article.title %></h2>
-        <h6><%= article.created_at.strftime('%b %d, %Y') %></h6>
-      </div>
+    <div class="row" style="border: 1px solid #cecece;">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="text-center">
+            <h2><%= article.title %></h2>
+            <h6><%= article.created_at.strftime('%b %d, %Y') %></h6>
+          </div>
+        </div>
 
-      <div>
-        <%= raw article.content %>
-      </div>
+        <div class="row">
+          <div class="col-md-12"><%= raw article.content %></div>
+        </div>
 
-      <div class="text-center">
-        <%= link_to "READ MORE", article_path(article) %>
+        <div class="row">
+          <div class="text-center">
+            <%= link_to "READ MORE", article_path(article) , {:style=>'color:#222222;', :class=>'btn btn-warning'} %>
+          </div>
+        </div>
+        <br>
       </div>
-      <br>
     </div>
+    <br><br>
     <% end %>
-    <%= link_to "Create new article", new_article_path %>
   </div>
 </div>
