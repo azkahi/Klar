@@ -14,19 +14,35 @@
 </div>
 <% end %>
 
+<div class="row">
 <div class="form-group">
-  <%= f.input :subject, class: "form-control" %>
+  <div class="form-group col-sm-6">
+    <%= f.input :to, class: "form-control" %>
+  </div>
+</div>
 </div>
 
+<div class="row">
 <div class="form-group">
-  <%= f.input :title, class: "form-control" %>
+  <div class="form-group col-sm-6">
+    <%= f.input :subject, class: "form-control" %>
+  </div>
+</div>
 </div>
 
+<div class="row">
 <div class="form-group">
-  <%= f.input :content, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
+  <div class="form-group col-sm-6">
+    <%= f.input :content, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
+  </div>
+</div>
 </div>
 
+<div class="row">
 <div class="form-group">
-  <%= f.button :submit %>
+  <div class="form-group col-sm-3">
+    <%= f.button :submit , :class=>'btn btn-primary' %>
+  </div>
+</div>
 </div>
 <% end %>
